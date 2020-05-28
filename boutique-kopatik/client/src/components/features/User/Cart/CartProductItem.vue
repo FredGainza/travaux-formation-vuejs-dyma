@@ -1,9 +1,9 @@
 <template>
   <div class="d-flex flex-row justify-content-between p-2">
     <span>{{item.title}}</span>
-    <span><strong> {{item.price | price}}</strong></span>
+    <span class="text-nowrap"><strong> {{item.price | price}}</strong></span>
     <button @click="deleteOne(item.id)" class="close">
-      <span>&times;</span>
+      <span class="text-red">&times;</span>
     </button>
   </div>
 </template>
@@ -23,7 +23,8 @@ export default {
 }
 </script>
 
-<style>
-
-
+<style scoped>
+  .text-red {
+    color: red !important;
+  }
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div class="d-flex flex-row">
+    <div class="d-flex flex-user">
         <transition name="left" appear>
-            <shop :products="products" class="w-75"></shop>
+            <shop :products="products" class="w-prod pb-md-3 pb-0"></shop>
         </transition>
         <transition name="right" appear>
-            <cart :cart="cart" class="w-25"></cart>
+            <cart :cart="cart" class="w-cart pt-md-3 pt-0"></cart>
         </transition>
     </div>
 </template>
@@ -35,6 +35,10 @@ export default {
 
 <style scoped>
 
+    .flex-user {
+        flex-direction: column;
+    }
+
     @keyframes fromleft{
         from {
             transform: translateX(-20px);
@@ -54,5 +58,26 @@ export default {
     }
     .right-enter-active{
         animation: fromright 1s;
+    }
+
+    @media (min-width: 768px) {
+        .flex-user {
+            flex-direction: row;
+        }
+        .w-prod {
+            width: 65%;
+        }
+        .w-cart {
+            width: 35%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .w-prod {
+            width: 75%;
+        }
+        .w-cart {
+            width: 25%;
+        }
     }
 </style>

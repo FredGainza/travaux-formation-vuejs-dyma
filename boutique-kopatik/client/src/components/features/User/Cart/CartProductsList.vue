@@ -4,7 +4,7 @@
     <cart-product-item v-for="item in cart" :key="item.id" :item="item"></cart-product-item>
     <template v-if="cart.length">
       <hr class="w-100">
-      <span>Total : {{ total }}</span>
+      <span class="font-weight-bold text-right fz-110">Total : <span class="text-success">{{ total }} &nbsp;€</span></span>
     </template>
   </div>
 </template>
@@ -31,5 +31,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .fz-110 {
+    font-size: 110% !important;
+  }
 </style>

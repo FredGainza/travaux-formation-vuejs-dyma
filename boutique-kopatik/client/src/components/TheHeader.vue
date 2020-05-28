@@ -1,8 +1,8 @@
 <template>
 <transition appear>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand">
-      <img src="../assets/logo.png" width="30" height="auto">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mr-5 text-info">
+      <img src="../assets/logo.png" width="30" class="mr-3" height="auto">
       KoPaTK
     </a>
     <button class="navbar-toggler">
@@ -10,7 +10,7 @@
     </button>
     <div id="collapse" class="collapse navbar-collapse">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item mr-3">
           <router-link class="nav-link" to="/shop-kopatik">Boutique</router-link>
           <!-- <a class="nav-link" :class="{ active: page === 'User'}" @click="changePage('User')">Boutique</a> -->
         </li>
@@ -20,12 +20,10 @@
         </li>
       </ul>
     </div>
-    <div class="navbar-nav">
-      <li class="nav-item text-right mr-5">
-        <a href="http://vps-3b5cc28b.vps.ovh.net/">
+    <div class="nav-item marg-0">
+        <a class="nav-link text-right marg-return" href="http://vps-3b5cc28b.vps.ovh.net/">
           <i class="fas fa-angle-double-left fa-sm mr-2 mt-3"></i>Retour à la liste
         </a>
-      </li>
     </div>
   </nav>
 </transition>
@@ -77,29 +75,47 @@ export default {
     cursor: pointer;
   }
   .router-link-active{
-    background-color: dimgrey;
     color: white !important;
+    font-weight: 600 !important;
   }
 
   a {
-      cursor: pointer;
+    color: #ccc !important;
+    cursor: pointer;
   }
-  .active{
-    background-color: dimgrey;
-  }
+
   a.active {
     color: white !important;
   }
 
-      @keyframes fromtop{
-        from {
-            transform: translateY(-20px);
-        }
-        to {}
-    }
+  a:hover {
+    color: #bbb !important;
+  }
 
-    .v-enter-active{
-        animation: fromtop 1s;
-    }
+  .marg-0 {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .marg-return{
+    padding: 0 !important;
+    margin-top: 0!important;
+    margin-bottom: .8rem !important;
+    margin-left: 0 !important;
+    margin-right: 3rem !important;
+    line-height: 1 !important;
+  }
+  .marg-return:hover{
+    text-decoration: underline;
+  }
+  @keyframes fromtop{
+    from {
+      transform: translateY(-20px);
+  }
+    to {}
+  }
+
+  .v-enter-active{
+    animation: fromtop 1s;
+  }
 
 </style>
