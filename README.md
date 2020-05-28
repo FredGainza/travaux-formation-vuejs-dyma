@@ -10,11 +10,9 @@ Une séquence aléatoire de plus en plus longue est jouée aléatoirement, et il
 
 Principes d'une boutique en ligne :
 
-** Une partie utilisateur :
+* Une partie utilisateur :
+    * listing d'articles présents sur le site
+    * panier d'articles souhaités
 
-* listing d'articles présents sur le site
-* panier d'articles souhaités
-
-** Une partie administration :
-
-* Ajout de nouveaux articles dans la base de données
+* Une partie administration :
+    * Ajout de nouveaux articles dans la base de données
